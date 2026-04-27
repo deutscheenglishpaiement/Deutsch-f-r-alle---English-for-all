@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement échoué</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .fail-box {
+      margin-top: 20px;
+      padding: 20px;
+      background: #fff1f1;
+      border: 1px solid #ffb3b3;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .fail-box p {
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 18px;
+      background: #e74c3c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px;
+      background: #ffcc00;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h2>❌ Paiement échoué</h2>
+  </div>
+
+  <div class="fail-box">
+    <p><strong>Oups 😕</strong></p>
+
+    <p>Une erreur est survenue lors du paiement.</p>
+
+    <p>Veuillez réessayer ou vérifier vos informations.</p>
+
+    <a class="btn" href="index.html">
+      🔁 Réessayer le paiement
+    </a>
+
+    <br>
+
+    <a class="back" href="index.html">
+      ⬅ Retour à l'accueil
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>

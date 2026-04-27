@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deutsch für alle - English for all - Paiement</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <img src="en.png" class="logo" alt="Anglais">
+
+    <div class="title">
+      <h2>Deutsch für alle - English for all</h2>
+      <p>Paiement des formations</p>
+    </div>
+
+    <img src="de.png" class="logo" alt="Allemand">
+
+  </div>
+
+  <!-- FORMULAIRE -->
+  <form id="formPaiement">
+
+    <!-- LANGUE -->
+    <label for="langue">Langue</label>
+    <select id="langue" required>
+      <option value="">Choisir une langue</option>
+      <option value="anglais">Anglais</option>
+      <option value="allemand">Allemand</option>
+    </select>
+
+    <!-- NIVEAU -->
+    <label for="niveau">Niveau</label>
+    <select id="niveau" required>
+      <option value="">Choisir un niveau</option>
+    </select>
+
+    <!-- PRIX -->
+    <div class="prix">
+      <span id="prix">0</span> FCFA
+    </div>
+
+    <!-- TYPE PAIEMENT -->
+    <label for="typePaiement">Type de paiement</label>
+    <select id="typePaiement">
+      <option value="complet">Paiement complet</option>
+      <option value="partiel">Paiement partiel</option>
+    </select>
+
+    <!-- PAIEMENT PARTIEL -->
+    <div id="blocPartiel" style="display:none;">
+      <label for="montantPaye">Montant à payer</label>
+      <input type="number" id="montantPaye" placeholder="Ex: 5000">
+    </div>
+
+    <!-- INFOS CLIENT -->
+    <h3>Informations personnelles</h3>
+
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" placeholder="Votre nom" required>
+
+    <label for="prenom">Prénom(s)</label>
+    <input type="text" id="prenom" placeholder="Vos prénoms" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="exemple@gmail.com" required>
+
+    <label for="numero">Numéro de téléphone</label>
+    <input type="tel" id="numero" placeholder="+229XXXXXXXXXX" required>
+
+    <!-- CONDITION -->
+    <p class="condition">
+      ⚠️ Paiement non remboursable. Validation après vérification.
+    </p>
+
+    <!-- BOUTON -->
+    <button type="submit">PAYER</button>
+
+  </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

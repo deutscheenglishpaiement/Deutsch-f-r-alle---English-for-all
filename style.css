@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fffbe6;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.header p {
+  font-size: 12px;
+  color: gray;
+  margin: 2px 0 0;
+}
+
+.title {
+  flex: 1;
+}
+
+/* LOGOS */
+.logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+/* LABEL */
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* INPUTS */
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+/* FOCUS PRO */
+select:focus,
+input:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 6px rgba(255,204,0,0.4);
+}
+
+/* PRIX */
+.prix {
+  text-align: center;
+  font-weight: bold;
+  margin: 18px 0;
+  font-size: 20px;
+  color: #b8860b;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+  background: #ffcc00;
+  border: none;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* HOVER */
+button:hover {
+  background: #e6b800;
+  transform: scale(1.01);
+}
+
+/* DISABLED BUTTON (important pour ton JS) */
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* CONDITION */
+.condition {
+  font-size: 12px;
+  margin-top: 12px;
+  text-align: center;
+  color: #555;
+}
+
+/* SUCCESS / FAIL BOX */
+.success-box,
+.fail-box,
+.card {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* LISTES */
+.card ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .header h2 {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+}
