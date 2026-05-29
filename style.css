@@ -1,20 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background: #fffbe6;
+  font-family: 'DM Sans', Arial, sans-serif;
+  background: linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 100%);
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 32px 16px;
   min-height: 100vh;
 }
 
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   background: white;
-  padding: 22px;
-  border-radius: 14px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
 /* HEADER */
@@ -22,116 +25,205 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 12px;
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #F5F4F2;
+  position: relative;
+}
+
+/* Barre accent rouge sous le header */
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #E8391A;
+  border-radius: 2px;
 }
 
 .header h2 {
-  font-size: 18px;
+  font-family: 'Sora', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
   margin: 0;
+  color: #1A1A1A;
+  line-height: 1.3;
 }
 
 .header p {
-  font-size: 12px;
-  color: gray;
-  margin: 2px 0 0;
+  font-size: 11px;
+  color: #6B6B6B;
+  margin: 4px 0 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.title {
-  flex: 1;
-}
+.title { flex: 1; }
 
 /* LOGOS */
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
-  background: #fff;
-  padding: 5px;
-  border-radius: 8px;
-  border: 1px solid #eee;
+  background: #FAFAF8;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1.5px solid #E8E5E0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 /* LABEL */
 label {
   display: block;
-  margin-top: 12px;
-  font-weight: 600;
-  font-size: 13px;
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 11px;
+  color: #6B6B6B;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* INPUTS */
+/* H3 */
+h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin: 24px 0 4px;
+  padding-top: 20px;
+  border-top: 1px solid #F0EDE8;
+}
+
+/* INPUTS & SELECTS */
 select,
 input {
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   margin-top: 6px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1.5px solid #E8E5E0;
+  border-radius: 10px;
   outline: none;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
   font-size: 14px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: #1A1A1A;
+  background: white;
+  box-sizing: border-box;
 }
 
-/* FOCUS PRO */
+select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B6B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
 select:focus,
 input:focus {
-  border-color: #ffcc00;
-  box-shadow: 0 0 6px rgba(255,204,0,0.4);
+  border-color: #E8391A;
+  box-shadow: 0 0 0 3px rgba(232, 57, 26, 0.12);
 }
+
+input::placeholder { color: #BBBDB8; }
 
 /* PRIX */
 .prix {
   text-align: center;
-  font-weight: bold;
-  margin: 18px 0;
-  font-size: 20px;
-  color: #b8860b;
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  margin: 20px 0;
+  font-size: 28px;
+  color: #E8391A;
+  background: #FFF3F0;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1.5px solid #FFD5CC;
 }
 
 /* BUTTON */
 button {
   width: 100%;
-  padding: 13px;
-  margin-top: 12px;
-  background: #ffcc00;
+  padding: 14px;
+  margin-top: 20px;
+  background: #E8391A;
+  color: white;
   border: none;
-  font-weight: bold;
-  border-radius: 8px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(232, 57, 26, 0.35);
 }
 
-/* HOVER */
 button:hover {
-  background: #e6b800;
-  transform: scale(1.01);
+  background: #C42E12;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 57, 26, 0.4);
 }
 
-/* DISABLED BUTTON (important pour ton JS) */
+button:active {
+  transform: translateY(0);
+}
+
+/* DISABLED BUTTON */
 button:disabled {
-  background: #ccc;
+  background: #BBBDB8;
   cursor: not-allowed;
   transform: none;
+  box-shadow: none;
 }
 
 /* CONDITION */
 .condition {
-  font-size: 12px;
-  margin-top: 12px;
+  font-size: 11px;
+  margin-top: 14px;
   text-align: center;
-  color: #555;
+  color: #6B6B6B;
+  background: #FAFAF8;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #E8E5E0;
+  line-height: 1.5;
 }
 
 /* SUCCESS / FAIL BOX */
-.success-box,
-.fail-box,
+.success-box {
+  margin-top: 16px;
+  padding: 16px;
+  background: #D1FAE5;
+  border: 1.5px solid #A7F3D0;
+  border-radius: 12px;
+  text-align: center;
+  color: #065F46;
+  font-weight: 600;
+}
+
+.fail-box {
+  margin-top: 16px;
+  padding: 16px;
+  background: #FEE2E2;
+  border: 1.5px solid #FECACA;
+  border-radius: 12px;
+  text-align: center;
+  color: #991B1B;
+  font-weight: 600;
+}
+
 .card {
-  margin-top: 15px;
-  padding: 15px;
-  background: #f9f9f9;
-  border-radius: 10px;
+  margin-top: 16px;
+  padding: 16px;
+  background: #FAFAF8;
+  border: 1.5px solid #E8E5E0;
+  border-radius: 12px;
   text-align: center;
 }
 
@@ -143,20 +235,9 @@ button:disabled {
 
 /* MOBILE */
 @media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
-
-  .container {
-    padding: 15px;
-  }
-
-  .header h2 {
-    font-size: 16px;
-  }
-
-  .logo {
-    width: 45px;
-    height: 45px;
-  }
+  body { padding: 16px 12px; }
+  .container { padding: 20px; }
+  .header h2 { font-size: 13px; }
+  .logo { width: 44px; height: 44px; }
+  .prix { font-size: 24px; }
 }
